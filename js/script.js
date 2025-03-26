@@ -1,7 +1,7 @@
 const btn = document.getElementById('btn');
+const showName = document.getElementById('showName');
+const showPrice = document.getElementById('showPrice');
 const price = 0.21;
-const showName = document.getElementById('nome');
-
 
 btn.addEventListener("click", function (event) {
     event.preventDefault();
@@ -16,7 +16,7 @@ btn.addEventListener("click", function (event) {
     if (age > 65) {
         finalPrice *= 0.6;
     }
-    console.log(finalPrice);
+    showPrice.innerHTML = finalPrice.toFixed(2)+" €";
 });
 
 
